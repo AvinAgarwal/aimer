@@ -63,6 +63,12 @@
   .tile b{display:block;font-size:17px;color:var(--blue-dark);margin-bottom:6px}
   .tile span{font-size:14px;color:var(--muted);line-height:1.5;display:block}
 
+  .band{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+  .feat{display:flex;gap:16px;align-items:flex-start;background:linear-gradient(135deg,var(--blue-dark),var(--blue));border-radius:14px;padding:22px 22px;color:#fff}
+  .feat-ico{flex:0 0 auto;width:54px;height:54px;border-radius:12px;background:rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center}
+  .feat b{display:block;font-size:17.5px;margin-bottom:6px}
+  .feat span{font-size:14.5px;color:#dcecf6;line-height:1.55;display:block}
+
   section.block{padding:48px 0 8px}
   .kicker{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
   section.block h2{font-size:clamp(24px,3.6vw,32px);margin-bottom:14px}
@@ -105,6 +111,7 @@
   footer a{color:#cdd6dc;text-decoration:none;font-weight:600}
 
   @media (max-width:760px){
+    .band{grid-template-columns:1fr}
     .tiles{grid-template-columns:1fr 1fr}
     .steps{grid-template-columns:1fr}
     .grid{grid-template-columns:1fr}
@@ -127,8 +134,7 @@
   <div class="wrap">
     <span class="eyebrow">New launch</span>
     <h1>Cardiotrack.AI now conducts the complete medical examination report (MER)</h1>
-    <p class="lead">Scheduling a physical examiner adds days and cost to every policy. Cardiotrack AI MER completes the full insurance medical examination in one natural spoken conversation, in the applicant's own language, at any hour.</p>
-    <p class="sub">At the end, a signed, insurer ready report is generated automatically and pushed straight into your system. No examiner visit needed for the questionnaire portion of underwriting.</p>
+    <p class="lead">No examiner scheduling. The applicant simply talks, the AI examines, and a signed MER lands in your system automatically.</p>
     <div class="btns">
       <a class="btn btn-blue" href="#mer-video" id="hero-watch">Watch the launch video</a>
       <a class="btn btn-wa" href="https://wa.me/919148575014?text=Hello%20Cardiotrack%2C%20I%20saw%20the%20AI%20Medical%20Examination%20video.%20Please%20share%20details%20for%20our%20team.%20%5BMER%5D">
@@ -186,10 +192,25 @@
 
 <div class="wrap">
   <div class="tiles">
-    <div class="tile"><b>24x7, on demand</b><span>The examination starts whenever the applicant is ready, day or night.</span></div>
-    <div class="tile"><b>Any language</b><span>English, Hindi and all major Indian regional languages, switch mid conversation.</span></div>
-    <div class="tile"><b>Auto delivered</b><span>A signed, insurer branded MER PDF is pushed straight into your system.</span></div>
-    <div class="tile"><b>Fully auditable</b><span>Photo ID, digital signature and a recorded session on every examination.</span></div>
+    <div class="tile"><b>24x7, on demand</b><span>Starts whenever the applicant is ready.</span></div>
+    <div class="tile"><b>Any Indian language</b><span>Switch language mid conversation.</span></div>
+    <div class="tile"><b>Auto delivered</b><span>Signed MER PDF, straight into your system.</span></div>
+    <div class="tile"><b>Fully auditable</b><span>Photo ID, signature, recorded session.</span></div>
+  </div>
+
+  <div class="band">
+    <div class="feat">
+      <div class="feat-ico">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+      </div>
+      <div><b>A real doctor, connected instantly</b><span>If the applicant asks for a doctor at any point, the app hands off to a live video call with an actual doctor that connects automatically.</span></div>
+    </div>
+    <div class="feat">
+      <div class="feat-ico">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 22h8M12 18v4"/></svg>
+      </div>
+      <div><b>Web browser and Android native</b><span>Runs in any web browser and as a native Android app, so applicants complete it on whatever device they have.</span></div>
+    </div>
   </div>
 </div>
 
@@ -198,9 +219,9 @@
     <div class="kicker">How it works</div>
     <h2>Three steps, no examiner scheduling</h2>
     <div class="steps">
-      <div class="step"><div class="num">1</div><h3>The applicant talks</h3><p>They open the web or Android app and speak naturally. The AI examiner listens, understands and responds like a real person, not a rigid form.</p></div>
-      <div class="step"><div class="num">2</div><h3>The AI examines</h3><p>It covers the complete MER, body measurements, 17 medical condition categories and a women's health section, with intelligent follow up questions whenever a condition is flagged.</p></div>
-      <div class="step"><div class="num">3</div><h3>Your report arrives</h3><p>A signed MER PDF in your branding, including the ID photo page, lands in your system automatically and is saved in the applicant's Reports section.</p></div>
+      <div class="step"><div class="num">1</div><h3>The applicant talks</h3><p>On web or Android, they speak naturally and the AI examiner responds like a real person.</p></div>
+      <div class="step"><div class="num">2</div><h3>The AI examines</h3><p>The complete MER, with intelligent follow up questions whenever a condition is flagged.</p></div>
+      <div class="step"><div class="num">3</div><h3>Your report arrives</h3><p>A signed MER PDF in your branding lands in your system automatically.</p></div>
     </div>
   </div>
 </section>
@@ -209,16 +230,13 @@
   <div class="wrap">
     <div class="kicker">Capabilities</div>
     <h2>Built for real applicants, not ideal ones</h2>
-    <p class="intro">People do not answer medical questionnaires in neat yes and no replies. The AI examiner is built for how India actually speaks.</p>
     <div class="grid">
-      <div class="card"><h3>A conversation, not a form</h3><p>Real time voice AI holds a natural dialogue. It interprets rambling, hedged or indirect answers correctly, so "just occasionally, maybe once a week" is captured accurately, with no keyword scripting. Disciplined turn taking means background noise never derails the exam.</p></div>
-      <div class="card"><h3>Every language your applicants speak</h3><p>The applicant can even switch language mid sentence and the conversation continues seamlessly. True pan India reach with no language barrier.</p>
+      <div class="card"><h3>A conversation, not a form</h3><p>Understands rambling, hedged or indirect answers and records them correctly. Background noise never derails the exam.</p></div>
+      <div class="card"><h3>Every language your applicants speak</h3><p>Switch language mid sentence, the exam continues seamlessly.</p>
         <div class="langs"><em>English</em><em>Hindi</em><em>Punjabi</em><em>Tamil</em><em>Bengali</em><em>Kannada</em><em>Telugu</em><em>Malayalam</em><em>Marathi</em><em>Gujarati</em><em>Odia</em><em>Urdu</em><em>and more</em></div>
       </div>
-      <div class="card"><h3>Complete MER coverage</h3><p>Body measurements, 17 medical condition categories and a women's health section. When a condition is flagged, the examiner asks what, since when, and whether the applicant is on medication.</p></div>
-      <div class="card"><h3>A doctor is one ask away</h3><p>If the applicant asks to speak to a doctor, the app hands off instantly to a live video call with a doctor that connects automatically.</p></div>
-      <div class="card"><h3>Identity and integrity built in</h3><p>Photo ID capture at the start, a digital signature at the end, and the full session recorded for audit. Every examination stands up to scrutiny.</p></div>
-      <div class="card"><h3>The report writes itself</h3><p>A signed MER PDF in your brand and format is generated automatically, pushed to your system, and saved in the applicant's app for their own records.</p></div>
+      <div class="card"><h3>Complete MER coverage</h3><p>Body measurements, 17 medical condition categories and a women's health section, with follow up questions on every flagged condition.</p></div>
+      <div class="card"><h3>Identity and integrity built in</h3><p>Photo ID at the start, digital signature at the end, full session recorded for audit.</p></div>
     </div>
   </div>
 </section>
@@ -226,7 +244,6 @@
 <section class="dark">
   <div class="wrap">
     <h2>Privacy and compliance, by design</h2>
-    <p class="intro">Underwriting data deserves the same discipline as the examination itself.</p>
     <div class="chips">
       <span class="chip"><b>Encrypted</b> at rest</span>
       <span class="chip"><b>Explicit consent</b> captured in app</span>
@@ -239,25 +256,10 @@
   </div>
 </section>
 
-<section class="value">
-  <div class="wrap">
-    <div class="kicker">Why underwriting teams care</div>
-    <h2>Faster issuance, at a fraction of the cost</h2>
-    <ul>
-      <li>Policies issue faster because the medical examination no longer waits for an examiner's diary.</li>
-      <li>Available 24x7 and on demand, so the applicant completes it at their convenience.</li>
-      <li>Scales to any volume without hiring or scheduling human examiners.</li>
-      <li>Dramatically lower cost per examination than a physical visit.</li>
-      <li>True multilingual reach across India, one process for every geography.</li>
-      <li>A complete audit trail, ID, signature and recording, for underwriting confidence.</li>
-    </ul>
-  </div>
-</section>
-
 <section class="cta">
   <div class="wrap">
     <h2>See it on your own applicant journey</h2>
-    <p>Watch the video, then let us walk your team through a live examination and show how the signed report lands in your system.</p>
+    <p>Let us walk your team through a live examination.</p>
     <div class="btns">
       <a class="btn btn-wa" href="https://wa.me/919148575014?text=Hello%20Cardiotrack%2C%20I%20saw%20the%20AI%20Medical%20Examination%20video.%20Please%20share%20details%20for%20our%20team.%20%5BMER%5D">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.9-4.44 9.9-9.9S17.5 2 12.04 2zm0 18.02c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.73-.66-1.23-1.47-1.38-1.72-.14-.24-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29z"/></svg>
