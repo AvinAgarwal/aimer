@@ -63,6 +63,12 @@
   .tile b{display:block;font-size:17px;color:var(--blue-dark);margin-bottom:6px}
   .tile span{font-size:14px;color:var(--muted);line-height:1.5;display:block}
 
+  .pcard{display:flex;gap:18px;align-items:flex-start;background:var(--tint);border:1px solid #cfe3f2;border-left:4px solid var(--blue-dark);border-radius:14px;padding:22px 24px;margin-top:22px}
+  .pcard-ico{flex:0 0 auto;width:48px;height:48px;border-radius:50%;background:var(--blue-dark);display:flex;align-items:center;justify-content:center}
+  .pcard b.pt{display:block;font-size:17px;color:var(--charcoal);margin-bottom:2px}
+  .pcard .pnum{display:block;font-size:14px;font-weight:700;color:var(--blue-dark);margin-bottom:8px}
+  .pcard p{font-size:14px;color:var(--muted);line-height:1.6;margin:0}
+
   .band{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
   .feat{display:flex;gap:16px;align-items:flex-start;background:linear-gradient(135deg,var(--blue-dark),var(--blue));border-radius:14px;padding:22px 22px;color:#fff}
   .feat-ico{flex:0 0 auto;width:54px;height:54px;border-radius:12px;background:rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center}
@@ -111,6 +117,7 @@
   footer a{color:#cdd6dc;text-decoration:none;font-weight:600}
 
   @media (max-width:760px){
+    .pcard{flex-direction:column}
     .band{grid-template-columns:1fr}
     .tiles{grid-template-columns:1fr 1fr}
     .steps{grid-template-columns:1fr}
@@ -165,6 +172,16 @@
       <span class="video-bar">See the AI examiner conduct a complete MER, live</span>
     </button>
     <p class="video-note">Plays right here. Prefer YouTube? Open <a href="https://youtu.be/XJORLqwJqDw" target="_blank" rel="noopener">youtu.be/XJORLqwJqDw</a></p>
+    <div class="pcard">
+      <div class="pcard-ico">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z"/><path d="M8.5 12l2.3 2.3L15.5 9.5"/></svg>
+      </div>
+      <div>
+        <b class="pt">Patent pending</b>
+        <span class="pnum">Indian Patent Application No. 202641101681</span>
+        <p>The technology behind AI MER is the subject of a filed patent application covering the real time multilingual voice examination that captures answers as a structured, language independent record no matter which language the applicant speaks or switches to, protected session integrity so the examiner's prompts are never interrupted or truncated, instant escalation to a live human doctor with the partially completed record carried over, and a tamper evident authenticated report binding the applicant's identity, live image, digital signature and session recording.</p>
+      </div>
+    </div>
   </div>
 </section>
 <script>
